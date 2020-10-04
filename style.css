@@ -1,0 +1,288 @@
+/* INSTRUCTIONS
+ *
+ * 1) Keep the text inside .intro-content
+ *    in the same place, but have the background
+ *    extend from one side of the viewport
+ *    to the other, no matter how wide or narrow
+ *    the browser is.
+ *
+ * 2) Limit the maximum width of the text in the
+ *    bottom area.
+ *
+ * You may modify the HTML if needed
+ * (you probably should for this challenge)
+ *
+ */
+:root {
+  font-size: 10px;
+  --clr-light: #ffffff;
+  --clr-bg: #136c72;
+  --clr-dark: #23424A;
+  --clr-darker: #072a2d;
+  --clr-accent: #38cfd9;
+  --clr-title: #87629a;
+  --ts-h1: 4.8rem;
+  --ts-h2:3.6rem;
+  --ts-p: 2.1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* typography  and text colors */
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-size: var(--ts-h1);
+  font-weight: 900;
+  
+}
+
+h2 {
+  font-size: var(--ts-h2);
+  font-weight: 900;
+}
+.color--bg {
+  color: var(--clr-bg);
+}
+.color--title {
+  color: var(--clr-title);
+}
+
+.color--light {
+  color: var(--clr-light);
+}
+p {
+  font-size: var(--ts-p);
+  line-height: 1.5em;
+}
+
+/* reusable components  */
+.button{
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--clr-accent);
+  border: none;
+  color: var(--clr-darker);
+  font-size: max(var(--ts-p), .4vw);
+  padding: 1em 2em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 2em;
+}
+
+.button:hover,
+.button:focus {
+  opacity: .75;
+}
+
+
+img {
+  width: 100%;
+} 
+
+
+.container {
+  margin: 0 auto;
+  width: min(1100px, 80%);
+  /* border: 1px solid yellow; */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col, .item {
+ width: 100%;
+text-align: center;
+}
+
+.col + .col {
+   
+ margin-left: 1em;
+}
+
+.zone {
+  padding: 4em 0;
+}
+
+
+/* section specific */
+
+
+/* navbar */
+
+header {
+  background-color: var(--clr-bg);
+  color: var(--clr-light);
+  padding: 2em;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  /* border: 2px solid red; */
+}
+
+.logo {
+  /* border: 2px solid red; */
+  /* margin-right: 2em; */
+}
+
+.nav__list {
+  display: flex;
+  /* border: 2px solid fuchsia; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* height: min(20vh, 5em); */
+}
+
+.nav__list--primary {
+  margin: 0 auto;
+}
+
+ .nav__item {
+   /* border: 1px solid red;  */
+   /* margin-right: 1em; */
+ }
+
+ .nav__item + .nav__item {
+   margin-left: 2em;
+ }
+
+.nav__link {
+  /* border: 1px solid yellow; */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--clr-light);
+  font-size: 1.6rem;
+}
+
+.nav__link--button {
+  background: var(--clr-light);
+  color: var(--clr-bg);
+  padding: .25em 1em;
+  border-radius: 3em;
+}
+
+.nav__link:hover {
+  opacity: .75;
+}
+
+
+
+/* hero */
+
+.zone__hero {
+  background: var(--clr-dark);
+  color: var(--clr-light);  
+}
+
+.zone__feature {
+  background: var(--clr-bg);
+  color: var(--clr-light);  
+}
+
+.hero__text {
+  width: 50%;
+  margin-top: 0;
+  /* border: solid red 1px; */
+}
+
+.hero__img,
+.side {
+  align-self: flex-start;
+  width: 35%;
+}
+
+.hero__text h1 {
+  padding-top: 0;
+  margin-top: 0;
+}
+.hero__text p {
+  margin-bottom: 2em;
+}
+
+/* main */
+.description {
+  width: 62%;
+  /* border: solid 2px red; */
+}
+.description p {
+  text-align: justify;
+}
+
+/* aside */
+.item {
+  /* border: solid 2px red; */
+}
+.item  {
+margin-bottom: 2em;
+}
+
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+  .logo {
+    max-width: 12ch;
+  }
+
+  .container * {
+    width: 100%;
+  }
+
+  .hero__img {
+    padding-top: 5em;;
+  }
+  .button {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .intro {
+  background: #23424a;
+  color: white;
+  padding: 50px 0;
+}
+
+.intro-content {
+  width: 50%;
+}
+
+.container{
+	width: min(80%, 750px);
+	margin: 0 auto;
+} */
